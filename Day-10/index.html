@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-Query Selector</title>
+    <style>
+      .red-color {
+        color: red;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="block">
+      <p class="paragraph">Welcome to my website</p>
+    </nav>
+    <div class="block" id="nameblock">
+      <h4>Hey there, My name is <span id="username">Snehasish Das</span></h4>
+      <p class="block">Here is a code for u</p>
+      <pre><code>console.log("Hey THERE")</code></pre>
+      <button id="clickbtn">Click me</button>
+      <div id="mycontainer"></div>
+    </div>
+    <script src="./index.js"></script>
+    <script>
+        //? ASychnronus and Synchronous 
+
+
+      // let a =10;
+      // let b= 20;
+      // let result = a+b;
+      // console.log(result);
+      // let resultfromServer = fetch("https://dummyjson.com/users");
+      // console.log(resultfromServer); //It will not execute and it shows pending
+
+      // async function getdata(){
+      //     let resultfromServer = await fetch("https://dummyjson.com/posts");
+      //     console.log(await resultfromServer.json());
+      // }
+
+
+      // getdata();
+
+      fetch("https://dummyjson.com/posts")
+        .then((data) => {console.log(data);})
+        .catch((error) => {console.log(error);})
+        .finally(() => {});
+    </script>
+  </body>
+</html>

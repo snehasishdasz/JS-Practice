@@ -22,6 +22,7 @@
         <p class="block">Here is a code for u</p>
         <pre><code>console.log("Hey THERE")</code></pre>
         <button id="clickbtn">Click me</button>
+        <div id="mycontainer"></div>
     </div>
     <script src="./index.js"></script>
     <script>
@@ -42,13 +43,24 @@
     // })
 
     
-    const allchildren =  document.querySelector("body").children;
-    console.log(allchildren)
-    for(let i = 0; i < allchildren.length; i++){
-        allchildren.item(i).addEventListener("click",()=>{
-            allchildren.item(i).remove()
-        })
-    }
+    // const allchildren =  document.querySelector("body").children;
+    // console.log(allchildren)
+    // for(let i = 0; i < allchildren.length; i++){
+    //     allchildren.item(i).addEventListener("click",()=>{
+    //         allchildren.item(i).remove()
+    //     })
+    // }
+
+
+       const button = document.getElementById("clickbtn");
+       const container =  document.getElementById("mycontainer")
+
+       button.addEventListener("click",() => {
+        const el = document.createElement("h1")
+        el.innerText = "BIKASH"
+        container.appendChild(el);
+       })
+
 
     </script>
 </body>
