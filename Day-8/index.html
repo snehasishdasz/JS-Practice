@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM-Query Selector</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <nav class="block">
@@ -25,11 +33,20 @@
     // console.log(username)
     // username.innerText = "Bikash"
 
-    const ele = document.querySelectorAll(".block");
-    console.log(ele)
-    ele.forEach((ele)=>{
-        console.log(ele.innerText)
-    })
+    // const ele = document.querySelectorAll(".block");
+    // console.log(ele)
+    // ele.forEach((ele)=>{
+    //     console.log(ele.innerText)
+    // })
+
+    const el = document.getElementById("username")
+    el.innerText = "Bikash"
+    el.classList.add("red-color","underline")
+    console.log(el.classList)
+
+    el.style.border = "1px solid red"
+
+    el.remove(); //it will remove the whole element
     </script>
 </body>
 </html>
